@@ -1,0 +1,245 @@
+.categoryAvatar,
+.filters {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: rgba(12, 12, 12, 0.895);
+}
+.filters {
+  align-self: stretch;
+  flex-direction: row;
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-xs);
+}
+.categoryAvatar {
+  flex-direction: column;
+  padding: var(--padding-12xs) 0 0;
+  
+}
+.listenAgain,
+.sufyanAli {
+  position: relative;
+  letter-spacing: -0.01em;
+  line-height: 24px;
+  color: aliceblue;
+  
+}
+.sufyanAli {
+  display: inline-block;
+  min-width: 75px;
+}
+.listenAgain {
+  margin: 0;
+  font-size: var(--font-size-5xl);
+  font-weight: 700;
+  font-family: inherit;
+}
+.categoryTitle,
+.sufyanAliParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-11xs);
+}
+.categoryTitle {
+  flex-direction: row;
+  gap: var(--gap-xs);
+}
+.expandCircleLeftIcon {
+  object-fit: contain;
+}
+.expandCircleLeftIcon,
+.filledCircleRightIcon {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  min-height: 40px;
+}
+.categoryTitleParent,
+.expandCircleLeftParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  margin: 5px;
+}
+.categoryTitleParent {
+  width: 1132px;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 0 0 var(--padding-xl);
+  box-sizing: border-box;
+  gap: var(--gap-xl);
+  max-width: 100%;
+  background-color: rgba(11, 11, 11, 0.873);
+}
+.moreVertIcon,
+.rectangleParent {
+  margin: 0 !important;
+  position: absolute;
+}
+.moreVertIcon {
+  height: 18px;
+  width: 18px;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+}
+.rectangleParent {
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.playCircleIcon {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  display: none;
+  z-index: 1;
+}
+.playCircleIcon1 {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  z-index: 1;
+}
+.playCircleWrapper,
+.playlistSongTitleWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.playCircleWrapper {
+  justify-content: flex-end;
+  padding: 0 var(--padding-5xs);
+}
+.playlistSongTitleWrapper {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+.frameParent,
+.songsAlbums {
+  display: flex;
+  flex-direction: column;
+}
+.frameParent {
+  align-self: stretch;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.songsAlbums {
+  width: 180px;
+  flex-shrink: 0;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: var(--padding-113xl) 0 0;
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-xs);
+}
+.musicControlBackground {
+  height: 180px;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-9xs);
+  max-width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  max-height: 180px;
+}
+.moreVertIcon1 {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  z-index: 1;
+}
+.musicControlButtons {
+  width: 166px;
+  margin: 0 !important;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-29xl);
+}
+.musicControlBackgroundParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+.playCircleIcon3 {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: none;
+}
+.frameGroup {
+  width: 316px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-2xl);
+  box-sizing: border-box;
+  gap: var(--gap-xs);
+}
+.frameChild {
+  height: 180px;
+  width: 180px;
+  position: relative;
+  border-radius: var(--br-9xs);
+  object-fit: cover;
+}
+.filtersParent,
+.songsAlbumsParent {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.songsAlbumsParent {
+  width: 1132px;
+  overflow-x: auto;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 0 0 var(--padding-xl);
+  box-sizing: border-box;
+  gap: var(--gap-17xl);
+}
+.filtersParent {
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--gap-6xl);
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--light-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 750px) {
+  .songsAlbumsParent {
+    gap: var(--gap-lg);
+  }
+}
+@media screen and (max-width: 450px) {
+  .listenAgain {
+    font-size: var(--font-size-lgi);
+    line-height: 19px;
+  }
+  .categoryTitleParent {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,126 @@
+.infoBackgroundIcon {
+  height: 48px;
+  width: 48px;
+  position: relative;
+  object-fit: cover;
+  min-height: 48px;
+}
+.listenAgain,
+.mufambiThe {
+  position: relative;
+  letter-spacing: -0.01em;
+}
+.listenAgain {
+  width: 174px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mufambiThe {
+  line-height: 19.2px;
+  display: inline-block;
+  min-width: 96px;
+}
+.travelViewsChild {
+  width: 6px;
+  height: 6px;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--color-gainsboro-200);
+}
+.travelViews {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-6xs-5) 0 0;
+}
+.kViews,
+.likes {
+  position: relative;
+  letter-spacing: -0.01em;
+  display: inline-block;
+  min-width: 77px;
+}
+.likes {
+  min-width: 68px;
+}
+.artistTravel,
+.detailsContent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-9xs-8);
+}
+.detailsContent {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-9xs);
+  min-width: 265px;
+  max-width: 100%;
+}
+.thumbDownIcon {
+  height: 18px;
+  width: 18px;
+  position: relative;
+  min-height: 18px;
+}
+.interactionIcons {
+  flex-direction: row;
+  gap: var(--gap-base);
+}
+.detailsContainer,
+.interactionButtons,
+.interactionIcons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.interactionButtons {
+  flex-direction: column;
+  padding: var(--padding-xs) 0 0;
+}
+.detailsContainer {
+  align-self: stretch;
+  flex-direction: row;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.infoBackgroundParent,
+.infoDetails {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.infoDetails {
+  width: 501px;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-10xs) 0 0;
+}
+.infoBackgroundParent {
+  flex: 1;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+  gap: var(--gap-5xs);
+  min-width: 675px;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--light-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 750px) {
+  .detailsContainer {
+    flex-wrap: wrap;
+  }
+  .infoBackgroundParent {
+    flex-wrap: wrap;
+    min-width: 100%;
+  }
+}

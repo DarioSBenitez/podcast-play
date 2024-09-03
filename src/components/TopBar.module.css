@@ -1,0 +1,135 @@
+.menuIcon {
+  height: 50%;
+  width: 75%;
+  position: absolute;
+  margin: 0 !important;
+  top: 25%;
+  right: 12.5%;
+  bottom: 25%;
+  left: 12.5%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 1;
+  top:30px;
+  
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+.onPlatformLogoDark1Icon {
+  align-self: stretch;
+  width: 106.7px;
+  position: relative;
+  max-height: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 32px;
+  
+}
+.menuParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-13xl) var(--padding-19xl);
+  gap: var(--gap-base);
+  background-color: rgb(8, 8, 7);
+}
+.icon,
+.search1 {
+  position: relative;
+}
+.icon {
+  height: 24px;
+  width: 24px;
+  min-height: 24px;
+}
+.search1 {
+  flex: 1;
+  letter-spacing: -0.01em;
+  line-height: 50px;
+  font-weight: 600;
+  display: inline-block;
+  max-width: 100%;
+ 
+}
+.search {
+  width: 416px;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-gray-300);
+  border: 1px solid var(--color-gray-200);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs) var(--padding-2xs);
+  gap: var(--gap-5xs);
+  max-width: 100%;
+  background-color: rgba(243, 241, 231, 0.934);
+}
+.castIcon {
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+.castWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs) 0 0;
+}
+.frameParent,
+.searchBar,
+.searchBarWrapper,
+.topBar {
+  display: flex;
+  flex-direction: row;
+   margin: 5px;
+}
+.frameParent {
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.searchBar,
+.searchBarWrapper,
+.topBar {
+  max-width: 100%;
+}
+.searchBar {
+  flex: 1;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  background-color: rgba(9, 9, 9, 0.901);
+}
+.searchBarWrapper,
+.topBar {
+  justify-content: flex-start;
+}
+.searchBarWrapper {
+  width: 1208px;
+  padding: var(--padding-5xl) var(--padding-29xl);
+  box-sizing: border-box;
+}
+.topBar {
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-dimgray);
+  font-family: var(--font-inter);
+  background-color: rgba(14, 11, 11, 0.845);
+}
+@media screen and (max-width: 1200px) {
+  .searchBarWrapper {
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
+    box-sizing: border-box;
+  }
+}

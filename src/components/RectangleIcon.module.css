@@ -1,0 +1,9 @@
+.frameChild {
+  height: 180px;
+  width: 180px;
+  position: relative;
+  border-radius: var(--br-9xs);
+  object-fit: cover;
+  margin-left: 5px;
+  margin-right: 5 px
+}

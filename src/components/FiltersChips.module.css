@@ -1,0 +1,50 @@
+.home {  
+  text-decoration: none;  
+  position: relative;  
+  font-size: var(--font-size-xs);  
+  letter-spacing: 1px;  
+  line-height: 24px;  
+  font-family: var(--font-inter);  
+  color: var(--color-gray-100);  
+  text-align: center;  
+  display: inline-block;  
+  min-width: 50px; /* Aumentar el ancho mínimo */  
+  margin: 10px;
+}  
+
+.filtersChips,
+.homeWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+ 
+}
+.homeWrapper {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-7xs) var(--padding-base);
+  background-color: var(--light-white);
+  border-radius: var(--br-5xs);
+}
+.homeWrapper:hover {
+  background-color: var(--color-gainsboro-100);
+}
+.filtersChips {
+  padding: var(--padding-5xl) var(--padding-29xl);
+  box-sizing: border-box;
+  gap: var(--gap-3xs);
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--light-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 750px) {
+  .filtersChips {
+    flex-wrap: wrap;
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
+    box-sizing: border-box;
+  }
+}

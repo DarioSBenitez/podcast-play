@@ -1,0 +1,53 @@
+.playlistName {
+  align-self: stretch;
+  position: relative;
+}
+.artistName {
+  position: relative;
+  letter-spacing: -0.01em;
+  display: inline-block;
+  min-width: 89px;
+}
+.frameChild {
+  width: 4px;
+  height: 4px;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--color-darkgray);
+}
+.ellipseWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs-5) 0 0;
+}
+.songs {
+  width: 69px;
+  position: relative;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+}
+.artistNameParent,
+.playlistSongTitle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.artistNameParent {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 var(--padding-sm) 0 0;
+  gap: var(--gap-11xs);
+  color: var(--color-gray-400);
+}
+.playlistSongTitle {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-9xs);
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--light-white);
+  font-family: var(--font-inter);
+}

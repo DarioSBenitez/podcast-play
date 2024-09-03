@@ -1,0 +1,33 @@
+.barProgressed,
+.progressCircle {
+  position: absolute;
+  background-color: var(--color-red);
+}
+.barProgressed {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-10xs);
+  width: 73px;
+  height: 2px;
+}
+.progressCircle {
+  top: -5px;
+  left: 69px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  z-index: 1;
+}
+.seekbar {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  margin: 0 !important;
+  right: 0;
+  bottom: 72px;
+  left: 0;
+  border-radius: var(--br-10xs);
+  background-color: var(--color-gray-500);
+  z-index: 2;
+}

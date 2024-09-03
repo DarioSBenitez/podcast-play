@@ -1,0 +1,92 @@
+.frameChild {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  object-fit: cover;
+}
+.moreVertIcon {
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  margin: 0 !important;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+}
+.rectangleParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+.listenAgain,
+.listenAgain1 {
+  position: relative;
+  letter-spacing: -0.01em;
+  display: inline-block;
+  min-width: 96px;
+}
+.listenAgain1 {
+  flex: 1;
+  min-width: 92px;
+}
+.frameItem {
+  width: 6px;
+  height: 6px;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--color-gainsboro-200);
+}
+.ellipseWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-6xs-5) 0 0;
+}
+.listenAgain2 {
+  text-decoration: none;
+  flex: 1;
+  position: relative;
+  letter-spacing: -0.01em;
+  color: inherit;
+  display: inline-block;
+  min-width: 92px;
+}
+.listenAgainGroup {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-9xs);
+}
+.listenAgainParent {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-9xs);
+}
+.frameParent,
+.frameWrapper,
+.listenAgainParent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameWrapper {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 var(--padding-12xs);
+}
+.frameParent {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-5xs);
+  min-width: 80px;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--light-white);
+  font-family: var(--font-inter);
+}
