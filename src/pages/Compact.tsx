@@ -1,5 +1,10 @@
+
+import React, { useState } from "react";  
+
+
 import TopBar from "../components/TopBar";
 import SidebarExpandedAndCollapsed from "../components/SidebarExpandedAndCollapsed";
+
 import FrameComponent from "../components/FrameComponent";
 import AvatarWAddons from "../components/AvatarWAddons";
 import Buttons from "../components/Buttons";
@@ -7,8 +12,38 @@ import FrameComponent11 from "../components/FrameComponent11";
 import CategoryTitle from "../components/CategoryTitle";
 import FrameComponent3 from "../components/FrameComponent3";
 import styles from "./Compact.module.css";
+import Sidebar from "../components/Sidebar";
+import FormContainer from "../components/FormContainer";
+import PlaylistPreview from '../components/PlaylisPreviews';
+
 
 function Compact () {
+  const [showForm, setShowForm] = useState(false); // Controla si se muestra el formulario
+  const [playlists, setPlaylists] = useState([]); // Lista de playlists creadas
+  const [currentPlaylist, setCurrentPlaylist] = useState({
+    title: '',
+    description: '',
+    image: ''
+  }); // Playlist que se está creando
+
+  const handleMenuItemClick = () => {
+    setShowForm(true); // Muestra el formulario al hacer clic en "Nueva Playlist"
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setCurrentPlaylist({
+      ...currentPlaylist,
+      [name]: value
+    });
+  };
+
+  const handleFormSubmit = () => {
+    setPlaylists([...playlists, currentPlaylist]);
+    setShowForm(false); // Ocultar formulario después de agregar playlist
+    setCurrentPlaylist({ title: '', description: '', image: '' }); // Reiniciar formulario
+  };
+
   return (
     <div className={styles.compact}>
       <TopBar />
@@ -16,9 +51,22 @@ function Compact () {
         <div className={styles.sidebarExpandedAndCollapsedWrapper}>
           <SidebarExpandedAndCollapsed />
         </div>
+
+
         <section className={styles.content}>
           <FrameComponent />
-          
+         <div className="app">
+      <Sidebar playlists={playlists} onMenuItemClick={handleMenuItemClick} />
+      {showForm && (
+        <FormContainer
+          currentPlaylist={currentPlaylist}
+          onInputChange={handleInputChange}
+          onFormSubmit={handleFormSubmit}
+        />
+      )}
+      <PlaylistPreview currentPlaylist={currentPlaylist} />
+    </div>
+
           <div className={styles.frameGroup}>
             <div className={styles.categoryTitleGroup}>
               <div className={styles.categoryTitle1}>
@@ -51,6 +99,7 @@ function Compact () {
             </div>
             <FrameComponent11 />
           </div>
+
           <div className={styles.artistList}>
             <div className={styles.artistContent}>
               <CategoryTitle />
@@ -83,9 +132,10 @@ function Compact () {
               <FrameComponent3 rectangle2="/rectangle-2-22@2x.png" />
               <FrameComponent3 rectangle2="/rectangle-2-22@2x.png" />
               <FrameComponent3 rectangle2="/rectangle-2-23@2x.png" />
-              
+
             </div>
           </div>
+
         </section>
       </main>
 
@@ -94,5 +144,4 @@ function Compact () {
     </div>
   );
 };
-
 export default Compact;

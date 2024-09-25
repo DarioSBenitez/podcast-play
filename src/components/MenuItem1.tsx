@@ -26,6 +26,7 @@ const MenuItem1: FunctionComponent<MenuItem1Type> = ({
     };
   }, [propBackgroundColor]);
 
+}) 
   return (
     <div
       className={[styles.menuItem3, className].join(" ")}
@@ -47,5 +48,4 @@ const MenuItem1: FunctionComponent<MenuItem1Type> = ({
     </div>
   );
 };
-
 export default MenuItem1;
