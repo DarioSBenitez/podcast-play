@@ -40,7 +40,7 @@
   justify-content: flex-start;
   padding: var(--padding-13xl) var(--padding-19xl);
   gap: var(--gap-base);
-  background-color: rgb(8, 8, 7);
+  background-color: rgb(48, 48, 4);
 }
 .icon,
 .search1 {

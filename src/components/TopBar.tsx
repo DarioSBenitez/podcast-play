@@ -4,45 +4,41 @@ import styles from "./TopBar.module.css";
 
 
 
-function TopBar () {
-  return (
-    <div>
-    <header className={styles.topBar}>
-      <div className={styles.menuParent}>
-        <div className={styles.menu}>
-          <img className={styles.menuIcon} alt="" src="\menu.svg" />
-          
-        </div>
-        <img
-          className={styles.onPlatformLogoDark1Icon}
-          loading="lazy"
+import React, { useState } from "react";
 
-          alt=""
-          src="/on-platform-logo-dark-1.svg"
-        />
-      </div>
-      <div className={styles.searchBarWrapper}>
-        <div className={styles.searchBar}>
-          <div className={styles.search}>
-            <img className={styles.icon} alt="" src="/icon.svg" />
-            <div className={styles.search1}>Search...</div>
-          </div>
-          <div className={styles.frameParent}>
-            <div className={styles.castWrapper}>
-              <img
-                className={styles.castIcon}
-                loading="lazy"
-                alt=""
-                src="/cast.svg"
-              />
-            </div>
-            <AvatarWAddons />
-          </div>
+const TopBar = () => {
+    const [searchTerm, setSearchTerm] = useState("");
+
+    const handleInputChange = (event) => {
+        setSearchTerm(event.target.value);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // Aquí puedes manejar la búsqueda, por ejemplo, enviando el término a una API
+        console.log("Buscar:", searchTerm);
+    };
+
+    return (
+        <div className="flex items-center justify-between p-4 bg-black w-full">
+            <form onSubmit={handleSubmit} className="flex items-center space-x-4">
+                <input
+                    type="text"
+                    placeholder="Buscar..."
+                    value={searchTerm}
+                    onChange={handleInputChange}
+                    className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <button type="submit" className="bg-blue-500 text-white rounded-lg px-4 py-2 hover:bg-blue-600">
+                    Buscar
+                </button>
+            </form>
+            <button className="bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600">
+                Reproducir
+            </button>
         </div>
-      </div>
-   </header>
-   </div>
-  );
+    );
 };
 
 export default TopBar;
+

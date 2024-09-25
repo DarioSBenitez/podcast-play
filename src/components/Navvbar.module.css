@@ -1,0 +1,64 @@
+/* styles.css o tu archivo de estilos correspondiente */  
+.Navbar {  
+  display: flex; /* Utilizar Flexbox */  
+  justify-content: space-between; /* Espacio entre los elementos */  
+  padding: 15px; /* Padding opcional para la cabecera */  
+  background-color: #1e2430; /* Color de fondo opcional */  
+  width: 95%; /* Ocupar el 95% del ancho de la pantalla */
+  max-width: 1200px; /* Limitar el ancho máximo en pantallas grandes */
+  margin: 0 auto; /* Centrar la navbar dentro de la pantalla */
+}
+
+.Navbar input {
+  width: 200px; /* Fijar el ancho del input */
+  max-width: 30%; /* Asegurar que no se estire demasiado en pantallas pequeñas */
+}
+
+
+.navbarContainer {  
+  display: flex; /* Utilizar Flexbox */  
+  align-items: center; /* Alinear verticalmente en el centro */  
+  justify-content: space-between; /* Espacio entre los elementos */  
+  width: 70%; /* Ancho del contenedor, puedes ajustar según sea necesario */  
+  max-width: 1200px; /* Ancho máximo */  
+  background-color: #1e2430;
+  margin-left: 50%
+}  
+
+.contenedorlogo {
+  display: flex;         /* Coloca los elementos en fila (uno al lado del otro) */
+  align-items: center;   /* Alinea verticalmente al centro */
+  gap: 5px;              /* Espacio pequeño entre el ícono y el texto */
+  
+  font-size: 20px;       /* Tamaño del texto opcional */
+  color: rgb(246, 243, 243);
+  background-color: #1e2430;
+}
+
+
+.navbarsearch {  
+  flex-grow: 1; /* Permite que el input se expanda */  
+  margin-right: 10px; /* Espacio entre el input y el botón */  
+  padding: 8px; /* Espaciado interno del input */  
+  border: 1px solid #ccc; /* Borde opcional */  
+  border-radius: 4px; /* Bordes redondeados opcionales */  
+}  
+
+.navbarbutton {  
+  padding: 8px 12px; /* Espacio interno para el botón */  
+  border: none; /* Sin borde */  
+  background-color: #ff7b00b9; /* Color de fondo del botón */  
+  color: white; /* Color del texto del botón */  
+  border-radius: 4px; /* Bordes redondeados opcionales */  
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */  
+}  
+
+.navbarbutton:hover {  
+  background-color: #b31b00; /* Efecto de hover opcional para el botón */  
+}
+
+.logo{
+  font-size: 40px; /* Aumenta el tamaño del ícono */
+  color: rgba(255, 0, 0, 0.856);      /* Cambia el color del ícono si deseas */
+  margin-right: 10px; /* Espacio entre el ícono y el siguiente elemento */
+}

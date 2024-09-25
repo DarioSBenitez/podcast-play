@@ -1,16 +1,7 @@
 import { FunctionComponent, useMemo, type CSSProperties } from "react";
 import styles from "./MenuItem1.module.css";
 
-export type MenuItem1Type = {
-  className?: string;
-  hasText2?: boolean;
-  leftIcon?: boolean;
-  noText?: boolean;
-  text?: string;
 
-  /** Style props */
-  propBackgroundColor?: CSSProperties["backgroundColor"];
-};
 
 const MenuItem1: FunctionComponent<MenuItem1Type> = ({
   className = "",
@@ -18,13 +9,6 @@ const MenuItem1: FunctionComponent<MenuItem1Type> = ({
   leftIcon = true,
   noText = true,
   text = "Home",
-  propBackgroundColor,
-}) => {
-  const menuItem31Style: CSSProperties = useMemo(() => {
-    return {
-      backgroundColor: propBackgroundColor,
-    };
-  }, [propBackgroundColor]);
 
 }) 
   return (
@@ -48,4 +32,5 @@ const MenuItem1: FunctionComponent<MenuItem1Type> = ({
     </div>
   );
 };
+
 export default MenuItem1;

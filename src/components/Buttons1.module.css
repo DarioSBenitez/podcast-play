@@ -1,35 +1,22 @@
-.iconiconForMenu {
-  height: 20px;
-  width: 20px;
-  position: relative;
+.Buttons1 {  
+  padding: 10px 12px; /* Espacio interno para el botón */  
+  border: none; /* Sin borde */  
+  background-color: #383a3b; /* Color de fondo del botón */  
+  color: white; /* Color del texto del botón */  
+  border-radius: 3px; /* Bordes redondeados opcionales */  
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */  
+  display: block;            /* Hace que el botón sea un bloque */  
+  margin: 0 auto;          /* Margen automático para centrar */  
+  width: 120px;    
+}  
+
+.Buttons1:hover {  
+  background-color: #4df00c; /* Efecto de hover opcional para el botón */  
 }
-.home {
-  position: relative;
-  font-size: var(--font-size-xs);
-  letter-spacing: -0.01em;
-  line-height: 24px;
-  font-weight: 600;
-  font-family: var(--font-inter);
-  color: var(--light-white);
-  text-align: center;
-  display: inline-block;
-  min-width: 40px;
-}
-.iconiconForMenuParent {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-xs);
-}
-.buttons {
-  cursor: pointer;
-  border: 1px solid var(--light-white);
-  padding: var(--padding-7xs) var(--padding-12xl);
-  background-color: transparent;
-  border-radius: var(--br-32xl);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+.Icono {
+  width: 35px;   /* Cambia el tamaño del ícono */
+  height: 35px;
+  color: rgb(102, 255, 0); /* Cambia el color del ícono */
+  margin-right:auto 25px; /* Espacio entre el ícono y el texto */
 }

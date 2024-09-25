@@ -1,0 +1,55 @@
+/* PodcatsPlayer.module.css */
+
+.podcastList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Mínimo de 200px y máximo de 4 por fila */
+  gap: 20px; /* Espacio entre los items */
+  list-style: none; /* Elimina los puntos de las listas */
+  padding: 0;
+  margin: 0;
+}
+.error{  
+  color: rgb(82, 77, 75);          /* Color del texto */  
+  font-weight: bold;       /* Texto en negrita */  
+  font-size: 16px;         /* Tamaño del texto */  
+  background-color: #f0c7c7; /* Fondo claro para resaltar */  
+  border: 1px solid rgb(82, 77, 75); /* Borde rojo */  
+  padding: 10px;           /* Espaciado interno */  
+  border-radius: 4px;      /* Bordes redondeados */  
+  margin: 10px 0;          /* Espaciado externo */  
+  display: flex;           /* Para alinear contenido, como un ícono */  
+  align-items: center;     /* Alinear verticalmente */  
+}  
+
+.error::before {  
+  content: '⚠️';          /* Ícono de advertencia */  
+  margin-right: 8px;      /* Espaciado a la derecha del ícono */  
+}
+
+.loader {  
+  border: 8px solid #f3f3f3; /* Color del borde */  
+  border-top: 8px solid #3498db; /* Color del borde de la parte superior */  
+  border-radius: 50%; /* Hacer el borde redondo */  
+  width: 60px; /* Ancho del spinner */  
+  height: 60px; /* Alto del spinner */  
+  animation: spin 1s linear infinite; /* Animación de rotación */  
+
+  display: flex; /* Para centrar el texto */  
+  align-items: center;  
+  justify-content: center;  
+  margin: 20px auto; /* Centramos el spinner */  
+}  
+
+/* Definición de la animación de rotación */  
+@keyframes spin {  
+  0% { transform: rotate(0deg); }  
+  100% { transform: rotate(360deg); }  
+}  
+
+.loadingtext {  
+  color: #3498db; /* Color del texto */  
+  font-size: 18px; /* Tamaño del texto */  
+  text-align: center; /* Centrar el texto */  
+  margin-top: 10px; /* Espaciado superior */  
+}
+

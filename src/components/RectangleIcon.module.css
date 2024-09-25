@@ -5,5 +5,7 @@
   border-radius: var(--br-9xs);
   object-fit: cover;
   margin-left: 5px;
-  margin-right: 5 px
+  margin-right: 5 px;
+  background-color: rgb(82, 77, 75);
+
 }

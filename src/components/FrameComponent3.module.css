@@ -1,83 +1,37 @@
-.frameChild {
-  height: 200px;
-  width: 200px;
-  position: relative;
-  object-fit: cover;
-}
-.moreVertIcon {
-  height: 18px;
-  width: 18px;
-  position: absolute;
-  margin: 0 !important;
-  top: 8px;
-  right: 8px;
-  z-index: 1;
-}
-.rectangleParent {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: relative;
-}
-.listenAgain,
-.listenAgain1 {
-  position: relative;
-  letter-spacing: -0.01em;
-  display: inline-block;
-  min-width: 96px;
-}
-.listenAgain1 {
-  flex: 1;
-  min-width: 92px;
-}
-.frameItem {
-  width: 6px;
-  height: 6px;
-  position: relative;
-  border-radius: 50%;
-  background-color: var(--color-gainsboro-200);
-}
-.ellipseWrapper,
-.listenAgainGroup {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.ellipseWrapper {
-  flex-direction: column;
-  padding: var(--padding-6xs-5) 0 0;
-}
-.listenAgainGroup {
-  align-self: stretch;
-  flex-direction: row;
-  gap: var(--gap-9xs);
-}
-.listenAgainParent {
-  flex: 1;
-  flex-direction: column;
-  gap: var(--gap-9xs);
-}
-.frameParent,
-.frameWrapper,
-.listenAgainParent {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.frameWrapper {
-  align-self: stretch;
-  flex-direction: row;
-  padding: 0 var(--padding-12xs);
-}
-.frameParent {
-  flex: 1;
-  flex-direction: column;
-  gap: var(--gap-5xs);
-  min-width: 80px;
-  text-align: left;
-  font-size: var(--font-size-base);
-  color: var(--light-white);
-  font-family: var(--font-inter);
+container {  
+  display: flex;  
+  flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea */  
+  justify-content: space-between; /* Espacio uniforme entre elementos */  
+  margin: -2.5px;
+  background-color: rgb(150, 12, 46);
+}  
+
+.artist {  
+  display: inline-flex; /* Cambiar a inline-flex para que el contenedor se ajuste al contenido */  
+  flex-direction: column; /* Mantener la dirección vertical */  
+  align-items: center; /* Centrar los elementos horizontalmente */  
+  margin: 10px; /* Espaciado entre contenedores */  
+  padding: 10px; /* Espaciado interno */  
+  border: 2px solid #f8f4f4; /* Borde ligero para el contenedor */  
+  border-radius: 8px; /* Bordes redondeados */  
+  background-color: #b2a4a4; /* Color de fondo suave */  
+  max-width: 80px; /* Ancho máximo para el contenedor */  
+}  
+
+.artist img {  
+  width: 120%; /* Hacer que la imagen ocupe el 100% del ancho del contenedor */  
+  height:max-content; /* Mantener la proporción de la imagen */  
+  border-radius: 4px; /* Bordes redondeados para la imagen */  
+  margin-bottom: 5px; /* Espaciado debajo de la imagen */  
+}  
+
+.artist strong {  
+  font-size: 0.9em; /* Tamaño de fuente reducido para el álbum */  
+  color: #333; /* Color del texto */  
+  margin-bottom: 5px; /* Espaciado debajo del álbum */  
+}  
+
+.artist div {  
+  font-size: 0.8em; /* Tamaño de fuente reducido para el nombre del artista */  
+  color: #666; /* Color del texto más claro para la descripción */  
 }

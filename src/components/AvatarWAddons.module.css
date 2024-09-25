@@ -22,7 +22,7 @@
   background-color: var(--color-darkblue);
   border: 2px solid var(--light-white);
   box-sizing: border-box;
-  background-color: brown;
+  background-color: rgb(42, 165, 42);
 }
 .status {
   top: 36px;
