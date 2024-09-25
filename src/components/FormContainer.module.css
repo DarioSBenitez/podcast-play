@@ -1,0 +1,29 @@
+
+
+  
+  .input {
+    width: 200px; /* Fijar el ancho del input */
+    max-width: 30%; /* Asegurar que no se estire demasiado en pantallas pequeñas */
+  }
+  
+  
+ 
+  
+  .search {  
+    flex-grow: 1; /* Permite que el input se expanda */  
+    margin-right: 10px; /* Espacio entre el input y el botón */  
+    padding: 8px; /* Espaciado interno del input */  
+    border: 1px solid #ccc; /* Borde opcional */  
+    border-radius: 4px; /* Bordes redondeados opcionales */  
+  }  
+  
+  .button {  
+    padding: 8px 12px; /* Espacio interno para el botón */  
+    border: none; /* Sin borde */  
+    background-color: #2f00ff; /* Color de fondo del botón */  
+    color: white; /* Color del texto del botón */  
+    border-radius: 4px; /* Bordes redondeados opcionales */  
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */  
+  }  
+  
+ 

@@ -1,21 +1,50 @@
 .container {  
-  display: flex;  
+  display: inline-flex;  
   flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea */  
-  justify-content: space-between; /* Espacio uniforme entre elementos */  
-  margin: -2.5px;
+  justify-content: flex-start; /* Comienza desde la i
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */  
+  width: 100%; /* Asegura que el contenedor ocupe toda la anchura disponible */  
 }  
 
+.item {  
+  flex: 0 1 calc(16.66% - 10px); /* Cada elemento ocupa aproximadamente 1/6 del ancho del contenedor */  
+  margin: 5px; /* Espaciado entre los elementos para evitar superposición */  
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */  
+}
+
 .artist {  
-  flex: 0 1 calc(16.66% - 5px); /* 6 elementos por fila con margen */  
-  margin: 2.5px;
-  
-  
-  background-color: #f0f0f0; /* Fondo gris claro */  
-  border-radius: 4px; /* Bordes redondeados */  
-  text-align: center; /* Centrar texto */  
-  transform: scale(0.7); 
-  
+  display: inline-flex; /* Cambiar a inline-flex para que el contenedor se ajuste al contenido */  
+  flex-direction: column; /* Mantener la dirección vertical */  
+  align-items: center; /* Centrar los elementos horizontalmente */  
+  /*margin: 10px; /* Espaciado entre contenedores */  
+  padding: 10px; /* Espaciado interno */  
+  border: 1px solid #ccc; /* Borde ligero para el contenedor */  
+  border-radius: 8px; /* Bordes redondeados */  
+  background-color: #f9f9f9; /* Color de fondo suave */  
+  max-width: 80px; /* Ancho máximo para el contenedor */  
+  /*flex: 0 1 calc(16.66% - 5px); /* Cada elemento ocupa aproximadamente 1/6 del ancho del contenedor con espacios */  
+  margin: 2.5px; /* Margen entre elementos para evitar superposición */  
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */  
+
 }  
+
+.artist img {  
+  width: 120%; /* Hacer que la imagen ocupe el 100% del ancho del contenedor */  
+  height:max-content; /* Mantener la proporción de la imagen */  
+  border-radius: 4px; /* Bordes redondeados para la imagen */  
+  margin-bottom: 5px; /* Espaciado debajo de la imagen */  
+}  
+
+.artist strong {  
+  font-size: 0.9em; /* Tamaño de fuente reducido para el álbum */  
+  color: #333; /* Color del texto */  
+  margin-bottom: 5px; /* Espaciado debajo del álbum */  
+}  
+
+.artist div {  
+  font-size: 0.8em; /* Tamaño de fuente reducido para el nombre del artista */  
+  color: #666; /* Color del texto más claro para la descripción */  
+}
 
 /* Estilos responsivos */  
 @media (max-width: 768px) {  
@@ -24,8 +53,3 @@
   }  
 }  
 
-@media (max-width: 480px) {  
-  .artist {  
-      flex: 0 1 calc(45% - 10px); /* 2 columnas en dispositivos muy pequeños */  
-  }  
-}  

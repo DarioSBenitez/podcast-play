@@ -1,0 +1,146 @@
+/* Reset básico */  
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
+
+body {  
+    font-family: Arial, sans-serif; /* Fuente general */  
+    
+    height: 1000%;
+    margin: 0;
+}  
+
+.App {  
+    display: flex;  
+    flex-direction: column; /* Organizar en columnas */  
+    height: 100vh; /* Tomar toda la altura de la ventana */  
+    background-color: rgb(82, 77, 75);
+    margin: 0;
+    padding: 0;
+   
+}  
+
+/* Estilos generales para el header */
+.header {
+  background-color: #1e2430;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1px;
+  flex-direction: column;
+}
+
+/* Contenedor de la barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #1e2430;
+}
+
+
+
+
+
+
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-search {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+
+.container {  
+    display: flex; /* Alinear barra lateral y contenido principal horizontalmente */  
+    flex: 1; /* Ocupa el espacio restante */  
+    overflow-y: auto;
+    margin: 1px;
+    
+  
+}  
+
+.Sidebar {  
+    background-color: #151b25; /* Color de fondo de la barra lateral */  
+    padding: 20px;  
+    width: 250px; /* Ancho fijo para la barra lateral */  
+    color: aliceblue;
+    
+    
+}  
+
+.main {
+  background-color: #111929;
+  padding: 20px;
+  flex: 1; /* Se expande para ocupar el espacio restante sin modificar el sidebar */
+  overflow-y: auto; /* Permite que el contenido dentro del main tenga scroll si es muy largo */
+  margin-left: 2px;
+}
+
+.footer {  
+    background-color: #1e2430; /* Color de fondo del pie de página */  
+    color: white;  
+    text-align: center;  
+    padding: 10px;  
+    margin: 1px;
+}
+
+
+
+
+.topSection {
+  display: flex;
+  flex-direction: column; /* Los botones se apilan verticalmente */
+  gap: 10px; /* Espacio entre los botones */
+  
+ 
+}
+
+.middleSection {
+  flex-grow: 1; /* Permite que esta sección crezca y ocupe el espacio disponible */
+  overflow-y: auto; /* Hace scroll si el contenido es largo */
+  
+}
+
+.line {  
+  height: 2px; /* grosor de la línea */  
+  background-color: #1e2430; /* color de la línea */  
+  margin: 20px 0; /* margen arriba y abajo */  
+}  
+
+
+.addButton {
+  width: 100%; /* Botón ocupa todo el ancho del sidebar */
+  padding: 10px;
+  background-color: #1a73e8; /* Color similar a los botones de YouTube Music */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background-color: #0c47a1; /* Color de hover */
+}
+
+.buttonBar {
+  display: flex;
+  justify-content: center; /* Opcional: Alinea los botones horizontalmente */
+  gap: 10px; /* Espacio entre botones */
+  padding: 10px 0; /* Margen opcional para separarlos del Navbar */
+  background-color: #1e2430; /* Color de fondo opcional para la barra de botones */
+}

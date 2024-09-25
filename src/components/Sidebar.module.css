@@ -1,16 +1,24 @@
-.Buttons {  
+
+   /*.sidebar {
+    background-color:aqua;
+    width: 14rem;
+    height: calc(100vh - 52px);
+    border-right: 1px solid;
+   }*/
+
+.navbarbutton {  
   padding: 8px 12px; /* Espacio interno para el botón */  
   border: none; /* Sin borde */  
-  background-color: #454a45; /* Color de fondo del botón */  
+  background-color: #007bff; /* Color de fondo del botón */  
   color: white; /* Color del texto del botón */  
   border-radius: 4px; /* Bordes redondeados opcionales */  
   cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */  
   display: block;            /* Hace que el botón sea un bloque */  
   margin: 0 auto;          /* Margen automático para centrar */  
-  width: 140px;             /* Ancho del botón */  
+  width: 100px;             /* Ancho del botón */  
 
 }  
 
-.Buttons:hover {  
-  background-color: #478d0e; /* Efecto de hover opcional para el botón */  
+.navbarbutton:hover {  
+  background-color: #2a0efd; /* Efecto de hover opcional para el botón */  
 }
