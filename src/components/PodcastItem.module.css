@@ -1,0 +1,67 @@
+.podcastItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 200px; /* Ajusta el ancho del contenedor del podcast */
+    border: 1.5px solid rgb(82, 77, 75); /* Borde de 2px con color rojo tomate */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    border-radius: 5px; /* Bordes redondeados */
+    
+  }
+  
+  .podcastImage {
+    width: 100px; /* Tamaño de la imagen más pequeño */
+    height: 100px;
+    object-fit: cover; /* Para asegurar que la imagen se ajuste bien */
+    margin-bottom: 10px;
+  }
+  
+  .ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%; /* Asegúrate de que el texto no desborde */
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    text-align: center;
+    color: aliceblue;
+  }
+  /* PodcastItem.module.css */
+
+  .winampPlayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding: 20px;
+    background-color: #45c572; 
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle un toque más moderno */
+    margin: 0 auto; /* Centrar el reproductor en la página */
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    width: 105%;
+    margin-top: 50px;
+  }
+  
+  .winampButton {
+    background-color: #ffffff;
+    border: none;
+    color: #101110;
+    font-size: 10px;
+    padding: 10px 20px;
+    border-radius: 10px; /* Botones redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .winampButton:hover {
+    background-color: #1DB954;
+    color: #ffffff;
+  }
+  

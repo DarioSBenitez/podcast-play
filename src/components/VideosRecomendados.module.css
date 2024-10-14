@@ -17,22 +17,22 @@
   font-family: inherit;
 }
 .categoryTitle,
-.listenContainer,
-.listenContainerWrapper {
+.listTitle,
+.sufyanAliParent {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
-.listenContainer {
+.sufyanAliParent {
   align-self: stretch;
   flex-direction: row;
   gap: var(--gap-11xs);
 }
 .categoryTitle,
-.listenContainerWrapper {
+.listTitle {
   max-width: 100%;
 }
-.listenContainerWrapper {
+.listTitle {
   flex: 1;
   flex-direction: column;
   padding: var(--padding-xs) 0 0;
@@ -62,4 +62,20 @@
   .categoryTitle {
     flex-wrap: wrap;
   }
+}
+
+.videosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.videoCard {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
 }
