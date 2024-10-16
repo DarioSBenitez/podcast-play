@@ -1,13 +1,18 @@
-//import { FaBeer } from 'react-icons/fa'; // Importar un ícono específico  
-import styles from "./Buttons1.module.css";  
+import React from 'react';
+import styles from "./Buttons1.module.css";
 
-function Buttons1({ name, Icono }) {  
-  return (  
-    <button className={styles.Buttons1}>  
-      <Icono ClassName ={styles.Icono}/> {/* Ícono dentro del botón */}  
-      {name}  
-    </button>  
-  );  
-}  
+interface Buttons1Props {
+  name: string;
+  Icono: React.ComponentType<{ className: string }>;
+}
+
+function Buttons1({ name, Icono }: Buttons1Props) {
+  return (
+    <button className={styles.Buttons1}>
+      <Icono className={styles.Icono} /> {/* Ícono dentro del botón */}
+      {name}
+    </button>
+  );
+}
 
 export default Buttons1;

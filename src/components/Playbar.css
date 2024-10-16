@@ -1,0 +1,35 @@
+/* src/components/Playbar.css */
+.playbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.playbar-info {
+    display: flex;
+    align-items: center;
+}
+
+.podcast-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.playbar-controls button {
+    background-color: #555;
+    color: white;
+    border: none;
+    margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.playbar-controls button:hover {
+    background-color: #777;
+}
