@@ -1,7 +1,14 @@
-import { FunctionComponent, useMemo, type CSSProperties } from "react";
+import { FunctionComponent } from "react";
 import styles from "./MenuItem1.module.css";
 
-
+// Asegúrate de definir MenuItem1Type
+type MenuItem1Type = {
+  className?: string;
+  hasText2?: boolean;
+  leftIcon?: boolean;
+  noText?: boolean;
+  text?: string;
+};
 
 const MenuItem1: FunctionComponent<MenuItem1Type> = ({
   className = "",
@@ -9,13 +16,9 @@ const MenuItem1: FunctionComponent<MenuItem1Type> = ({
   leftIcon = true,
   noText = true,
   text = "Home",
-
-}) 
+}) => {
   return (
-    <div
-      className={[styles.menuItem3, className].join(" ")}
-      style={menuItem31Style}
-    >
+    <div className={[styles.menuItem3, className].join(" ")}>
       {leftIcon && (
         <img
           className={styles.iconiconForMenu}

@@ -1,16 +1,30 @@
 import React from 'react';
-import styles from "./FormContainer.module.css"
+import styles from "./FormContainer.module.css";
 
-function FormContainer({ currentPlaylist, onInputChange, onFormSubmit }) {
-  
-    const { title, description, image } = currentPlaylist;
-    const isFormComplete = title && description && image;
+interface Playlist {
+  title: string;
+  description: string;
+  image: string;
+}
+
+interface FormContainerProps {
+  currentPlaylist: Playlist;
+  onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onFormSubmit: () => void;
+}
+
+const FormContainer: React.FC<FormContainerProps> = ({ currentPlaylist, onInputChange, onFormSubmit }) => {
+  const { title, description, image } = currentPlaylist;
+  const isFormComplete = title && description && image;
 
   return (
-    <form className="form-container" onSubmit={(e) => {
-      e.preventDefault();
-      onFormSubmit();
-    }}>
+    <form
+      className={styles["form-container"]}
+      onSubmit={(e) => {
+        e.preventDefault();
+        onFormSubmit();
+      }}
+    >
       <input
         type="text"
         name="title"
@@ -35,11 +49,15 @@ function FormContainer({ currentPlaylist, onInputChange, onFormSubmit }) {
         placeholder="URL de la imagen"
         className={styles.search}
       />
-      <button className = {styles.button} type="submit" disabled={!isFormComplete}>
+      <button
+        className={styles.button}
+        type="submit"
+        disabled={!isFormComplete}
+      >
         Add List
       </button>
     </form>
   );
-}
+};
 
 export default FormContainer;
