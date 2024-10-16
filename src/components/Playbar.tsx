@@ -1,10 +1,11 @@
-// src/components/Playbar.tsx
 import { useContext } from 'react';
 import { PodcastContext } from '../context/PodcastContext';
 import './Playbar.css'; // Estilos
 
 const Playbar = () => {
     const { isPlaying, currentPodcast, togglePlay, seekForward, seekBackward, closePlaybar } = useContext(PodcastContext);
+
+    if (!currentPodcast) return null; // No mostrar si no hay un podcast actual
 
     return (
         <div className="playbar">

@@ -85,14 +85,12 @@ function App() {
                 onFormSubmit={handleFormSubmit}
               />
             ) : (
-              <>
-                <div className={styles.artistList}>
-                  <div className={styles.artistContent}>
-                    <PodcastPlayer />
-                  </div>
-                  <div className={styles.artistItems2}></div>
+              <div className={styles.artistList}>
+                <div className={styles.artistContent}>
+                  <PodcastPlayer />
                 </div>
-              </>
+                <div className={styles.artistItems2}></div>
+              </div>
             )}
           </main>
         </div>
