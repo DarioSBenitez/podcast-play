@@ -1,13 +1,14 @@
-import { createContext, useState, ReactNode } from 'react';
+import { createContext, useState, ReactNode, useRef } from 'react';
 
 interface Podcast {
   title: string;
   image: string;
+  audioUrl: string; // Agregar URL de audio
 }
 
 interface PodcastContextType {
   isPlaying: boolean;
-  currentPodcast: Podcast;
+  currentPodcast: Podcast | null; // Cambiar a null inicialmente
   togglePlay: () => void;
   seekForward: () => void;
   seekBackward: () => void;
@@ -17,10 +18,7 @@ interface PodcastContextType {
 
 const defaultContext: PodcastContextType = {
   isPlaying: false,
-  currentPodcast: {
-    title: "Sample Podcast",
-    image: "https://via.placeholder.com/50",
-  },
+  currentPodcast: null,
   togglePlay: () => {},
   seekForward: () => {},
   seekBackward: () => {},
@@ -36,18 +34,39 @@ interface PodcastProviderProps {
 
 export const PodcastProvider = ({ children }: PodcastProviderProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentPodcast, setCurrentPodcast] = useState<Podcast>({
-    title: "Sample Podcast",
-    image: "https://via.placeholder.com/50",
-  });
+  const [currentPodcast, setCurrentPodcast] = useState<Podcast | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const togglePlay = () => setIsPlaying(!isPlaying);
-  const seekForward = () => console.log("Forward 10s");
-  const seekBackward = () => console.log("Rewind 10s");
-  const closePlaybar = () => console.log("Close playbar");
+  const togglePlay = () => {
+    if (isPlaying) {
+      audioRef.current?.pause();
+    } else {
+      audioRef.current?.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  const seekForward = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime += 10; // Adelantar 10 segundos
+    }
+  };
+
+  const seekBackward = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime -= 10; // Retroceder 10 segundos
+    }
+  };
+
+  const closePlaybar = () => {
+    setIsPlaying(false);
+    setCurrentPodcast(null);
+  };
 
   const changePodcast = (newPodcast: Podcast) => {
     setCurrentPodcast(newPodcast);
+    audioRef.current?.load(); // Cargar el nuevo podcast
+    setIsPlaying(false); // Resetear el estado de reproducción
   };
 
   return (
@@ -59,10 +78,13 @@ export const PodcastProvider = ({ children }: PodcastProviderProps) => {
         seekForward,
         seekBackward,
         closePlaybar,
-        changePodcast, // Función para actualizar el podcast
+        changePodcast,
       }}
     >
       {children}
+      <audio ref={audioRef}>
+        {currentPodcast && <source src={currentPodcast.audioUrl} type="audio/mpeg" />}
+      </audio>
     </PodcastContext.Provider>
   );
 };

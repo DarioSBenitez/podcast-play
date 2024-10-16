@@ -1,43 +1,20 @@
-import React, { useRef } from 'react';
-import styles from './PodcastItem.module.css'; // Importar los estilos específicos para este componente
+import React, { useContext } from 'react';
+import { PodcastContext } from '../context/PodcastContext';
+import styles from './PodcastItem.module.css';
 
 function PodcastItem({ title, description, imageUrl, audioUrl }) {
-  const audioRef = useRef(null); // Crear una referencia para el elemento de audio
+  const { changePodcast } = useContext(PodcastContext);
 
-  const playAudio = () => {
-    if (audioRef.current) {
-      audioRef.current.play(); // Reproducir el audio
-    }
+  const handlePlayClick = () => {
+    changePodcast({ title, image: imageUrl, audioUrl }); // Cambiar el podcast en el contexto
   };
-
-  const pauseAudio = () => {
-    if (audioRef.current) {
-      audioRef.current.pause(); // Pausar el audio
-    }
-  };
-
- 
-
 
   return (
     <li className={styles.podcastItem}>
       <img src={imageUrl} alt={title} className={styles.podcastImage} />
-      <h3 className={styles.ellipsis}>{title}</h3> {/* Título con elipsis */}
-      <p className={styles.ellipsis}>{description || 'No hay descripción disponible.'}</p> {/* Descripción con elipsis */}
-      
-      {/* Controles personalizados */}
-      
-     <div className = "{styles.winampPlayer}" >
-      <audio  ref={audioRef}>
-        <source src={audioUrl} type="audio/mpeg" />
-       
-      </audio>
-      <div className={styles.controls}>
-        <button className = {styles.winampButton} onClick={playAudio}>▶️ Play</button>
-        <button className = {styles.winampButton} onClick={pauseAudio}>⏸️ Pause</button>
-        
-      </div>
-    </div>
+      <h3 className={styles.ellipsis}>{title}</h3>
+      <p className={styles.ellipsis}>{description || 'No hay descripción disponible.'}</p>
+      <button className={styles.playButton} onClick={handlePlayClick}>▶️ Play</button>
     </li>
   );
 }

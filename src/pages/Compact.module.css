@@ -35,7 +35,7 @@ html, body {
   display: flex; /* Asegurarte de que flex esté activo */  
   flex: 1;  
   padding: 10px;  /* Corregido para eliminar el pipe (|) */  
-  background-color: rgb(123, 197, 50);  
+  background-color: rgb(50, 143, 197);  
   border: 1px solid #f2f4f5;  
   box-sizing: border-box; /* Incluye padding en el tamaño total */  
 }  
