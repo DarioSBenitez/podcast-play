@@ -1,6 +1,16 @@
-import React from 'react';
+//import React from 'react';
 
-function PlaylistPreview({ currentPlaylist }) {
+type PlaylistPreviewType = {
+  title: string;
+  description: string;
+  image: string;
+};
+
+type PlaylistPreviewProps = {
+  currentPlaylist: PlaylistPreviewType;
+};
+
+function PlaylistPreview({ currentPlaylist }: PlaylistPreviewProps) {
   const { title, description, image } = currentPlaylist;
 
   return (

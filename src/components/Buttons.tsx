@@ -1,12 +1,15 @@
-import styles from "./Buttons.module.css";  
+import styles from "./Buttons.module.css";
 
-function Buttons({nombre}) {  
-  return (  
-    <button className={styles.Buttons}>  {nombre}
-      
-       
-    </button>  
-  );  
-}  
+interface ButtonsProps {
+  nombre: string; // Definimos el tipo de "nombre"
+}
+
+function Buttons({ nombre }: ButtonsProps) {
+  return (
+    <button className={styles.Buttons}>
+      {nombre}
+    </button>
+  );
+}
 
 export default Buttons;
